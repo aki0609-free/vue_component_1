@@ -1,34 +1,35 @@
 <template>
-  <section>
-    <h2>My Friends</h2>
-    <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
-    </ul>
-  </section>
+  <div>
+    <the-header></the-header>
+    <badge-list></badge-list>
+    <user-info
+      :full-name="activeUser.name"
+      :info-text="activeUser.description"
+      :role="activeUser.role"
+    ></user-info>
+  </div>
 </template>
 
 <script>
-import FriendContact from './components/FriendContact.vue';
 export default {
-  components: { FriendContact },
   data() {
     return {
-      frinds: [
-        {
-          id: "manuel",
-          name: "Manuel Lorenz",
-          phone: "0123 45678 90",
-          email: "manuel@localhost.com",
-        },
-        {
-          id: "julie",
-          name: "Julie Jones",
-          phone: "3210 4568 90",
-          email: "julie@localhost.com",
-        },
-      ],
+      activeUser: {
+        name: 'Maximilian Schwarzmuller',
+        description: 'Site owner and admin',
+        role: 'admin',
+      },
     };
   },
 };
 </script>
+
+<style>
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
