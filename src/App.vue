@@ -1,34 +1,28 @@
 <template>
-  <section>
-    <h2>My Friends</h2>
-    <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
-    </ul>
-  </section>
+  <the-form></the-form>
 </template>
 
 <script>
-import FriendContact from './components/FriendContact.vue';
+import TheForm from './components/TheForm.vue';
+
 export default {
-  components: { FriendContact },
-  data() {
-    return {
-      frinds: [
-        {
-          id: "manuel",
-          name: "Manuel Lorenz",
-          phone: "0123 45678 90",
-          email: "manuel@localhost.com",
-        },
-        {
-          id: "julie",
-          name: "Julie Jones",
-          phone: "3210 4568 90",
-          email: "julie@localhost.com",
-        },
-      ],
-    };
-  },
-};
+  components: {
+    TheForm,
+  }
+}
 </script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #292929;
+}
+</style>
